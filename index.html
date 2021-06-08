@@ -3,12 +3,13 @@
   <head>
     <title>Pad</title>
     <meta charset="UTF-8" />
+  </head>
+  <body contenteditable></body>
+  
     <script>
       document.body.innerHTML = localStorage.getItem("content");
       window.setInterval(function save() {
         localStorage.setItem("content", document.body.innerHTML || "");
       }, 1000);
     </script>
-  </head>
-  <body contenteditable></body>
 </html>
